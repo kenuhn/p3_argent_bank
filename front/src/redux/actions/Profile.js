@@ -37,8 +37,6 @@ export function modifyProfile(firstName, lastName) {
             console.log(response)
              dispatch({type: PUT_PROFILE, payload: response.data.body}) 
 
-
-
         } catch(error) {
             return console.log(error )
         }

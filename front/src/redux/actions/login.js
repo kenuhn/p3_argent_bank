@@ -13,7 +13,7 @@ export default function login (email, password)  {
               },
           }) // Ajouter une parenthèse fermante ici
           console.log("Payload: ", true);
-          dispatch({type: LOGIN_SUCCESS, payload: true});
+          dispatch({type: LOGIN_SUCCESS, payload: {isloading: true, isAuthentificated: true}});
           localStorage.setItem("user", JSON.stringify(response.data.body.token));
           window.location = "/profile";  
       } catch (err) {
