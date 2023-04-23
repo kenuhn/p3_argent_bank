@@ -78,8 +78,10 @@ paths:
           description: User profile retrieved successully
           schema:
             $ref: '#/definitions/ApiResponse'
-        '400':
-          description: Invalid Fields
+        '400': 
+             description: Invalid token 
+        '401':
+              description: Invalid fields
         '500':
           description: Internal Server Error
     put:
@@ -108,8 +110,10 @@ paths:
           description: User profile retrieved successully
           schema:
             $ref: '#/definitions/ApiResponse'
-        '400':
-          description: Invalid Fields
+        '400': 
+             description: Invalid token 
+        '401':
+              description: Invalid fields
         '500':
           description: Internal Server Error
 
@@ -177,8 +181,10 @@ paths:
                       type: array
                       items:
                         $ref: '#/definitions/EditedTransaction'
+                '400': 
+                    description: Invalid id 
                 '401':
-                    description: Invalid id or token supplied
+                    description: Invalid token supplied
                 '500':
                     description: Internal Server Error
 
@@ -216,8 +222,10 @@ paths:
                   type: array
                   items:
                       $ref: '#/definitions/Transaction'
+              '400': 
+                    description: Invalid id 
               '401':
-                  description: Invalid Token or Id
+                    description: Invalid token supplied
               '404':
                   description: Transaction not found
               '500':
@@ -251,8 +259,10 @@ paths:
             responses:
               '200':
                 description: Transaction deleted successully
+              '400': 
+                    description: Invalid id 
               '401':
-                  description: Invalid token or id supplied
+                    description: Invalid token supplied
               '404':
                   description: Transaction not found
               '500':
