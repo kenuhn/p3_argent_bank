@@ -30,7 +30,7 @@ paths:
           schema:
             $ref: '#/definitions/LoginResponse'
         '400':
-          description: Invalid Fields
+          description: Bad request. Invalid Fields
         '500':
           description: Internal Server Error
   /user/signup:
@@ -54,7 +54,7 @@ paths:
           schema:
             $ref: '#/definitions/ApiResponse'
         '400':
-          description: Invalid Fields
+          description: Bad request. Invalid Fields
         '500':
           description: Internal Server Error
   /user/profile:
@@ -79,9 +79,9 @@ paths:
           schema:
             $ref: '#/definitions/ApiResponse'
         '400': 
-             description: Invalid token 
+             description: Bad request. Invalid fields 
         '401':
-              description: Invalid fields
+              description: unauthorized  
         '500':
           description: Internal Server Error
     put:
@@ -111,9 +111,9 @@ paths:
           schema:
             $ref: '#/definitions/ApiResponse'
         '400': 
-             description: Invalid token 
+             description: Bad request. Invalid fields 
         '401':
-              description: Invalid fields
+              description:  Unauthorized 
         '500':
           description: Internal Server Error
 
@@ -146,7 +146,7 @@ paths:
                   items:
                       $ref: '#/definitions/Transaction'
               '401':
-                  description: Invalid Token
+                  description:  Unauthorized 
               '500':
                   description: Internal Server Error
         put:
@@ -182,9 +182,9 @@ paths:
                       items:
                         $ref: '#/definitions/EditedTransaction'
                 '400': 
-                    description: Invalid id 
+                    description: Bad request. Invalid id 
                 '401':
-                    description: Invalid token supplied
+                    description:  Unauthorized 
                 '500':
                     description: Internal Server Error
 
@@ -223,9 +223,9 @@ paths:
                   items:
                       $ref: '#/definitions/Transaction'
               '400': 
-                    description: Invalid id 
+                    description: Bad request. Invalid id 
               '401':
-                    description: Invalid token supplied
+                    description: Unauthorized 
               '404':
                   description: Transaction not found
               '500':
@@ -260,9 +260,9 @@ paths:
               '200':
                 description: Transaction deleted successully
               '400': 
-                    description: Invalid id 
+                    description: Bad request. Invalid id 
               '401':
-                    description: Invalid token supplied
+                    description: Unauthorized 
               '404':
                   description: Transaction not found
               '500':
