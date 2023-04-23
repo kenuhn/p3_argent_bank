@@ -141,7 +141,7 @@ paths:
                   type: array
                   items:
                       $ref: '#/definitions/Transaction'
-              '400':
+              '401':
                   description: Invalid Token
               '500':
                   description: Internal Server Error
@@ -177,7 +177,7 @@ paths:
                       type: array
                       items:
                         $ref: '#/definitions/EditedTransaction'
-                '400':
+                '401':
                     description: Invalid id or token supplied
                 '500':
                     description: Internal Server Error
@@ -216,7 +216,7 @@ paths:
                   type: array
                   items:
                       $ref: '#/definitions/Transaction'
-              '400':
+              '401':
                   description: Invalid Token or Id
               '404':
                   description: Transaction not found
@@ -251,7 +251,7 @@ paths:
             responses:
               '200':
                 description: Transaction deleted successully
-              '400':
+              '401':
                   description: Invalid token or id supplied
               '404':
                   description: Transaction not found
