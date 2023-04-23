@@ -7,7 +7,6 @@ import Connexion from "./pages/Connexion"
 import Profile from "./pages/Profiles";
 import Navbarre from "./Components/Navbarre/Navbarre";
 import Footer from "./Components/Footer/Footer";
-
 function App() {
   const [isConnected, setConnect] = useState(false)
   useEffect(() => {

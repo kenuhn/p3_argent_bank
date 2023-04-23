@@ -6,3 +6,12 @@ export default function authHeader() {
       return {};
     }
   }
+
+  /* function isTokenExpired(token) {
+  const decodedToken = jwt.decode(token, { complete: true });
+  const currentDate = new Date().getTime() / 1000;
+  if (decodedToken.payload.exp < currentDate) {
+    return true;
+  }
+  return false;
+} */
